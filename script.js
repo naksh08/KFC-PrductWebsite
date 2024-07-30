@@ -1,3 +1,33 @@
+let tl = gsap.timeline()
+tl.from('#one',{
+    y: -1000
+})
+tl.to("#one",{
+    y: 0,
+    duration: 0.25
+})
+tl.from('#two',{
+    y: -1000
+})
+tl.to("#two",{
+    y: 0,
+    duration: 0.25
+})
+tl.from('#three',{
+    y: -1000
+})
+tl.to("#three",{
+    y: 0,
+    duration: 0.25
+})
+tl.to('#loader',{
+    opacity: 0,
+    duration: 0.4,
+});
+tl.to('#loader',{
+    display: 'none'
+})
+
 const dynamicText = document.querySelector("h2 > span")
 const words = ["Good!","Tasty!","Amazing!","Savory!"]
 
