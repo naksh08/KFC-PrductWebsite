@@ -49,6 +49,7 @@ h1{
     text-shadow: 2px 2px 2px #00000081;
     margin-bottom: 8vw;
     background-color: transparent;
+    overflow: hidden;
 }
 
 
