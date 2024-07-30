@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    /* background-color: #cbc3bb; */
+  }
+  
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  #main {
+    height: 100%;
+    width: 100%;
+    /* margin: 0 2.5vw; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background-image: linear-gradient(45deg, #ffa600 14.7%, #ff6361 73%);
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+h1{
+    font-family: "Playfair Display", serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 3vw;
+    margin-bottom: 2vw;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #00000081;
+    margin-bottom: 8vw;
+    background-color: transparent;
+}
+
+
+
+#cards {
+    height: 40%;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    transition: all ease 1s;
+    /* background-color: #cbc3bb; */
+  }
+  
+  .card0,
+  .card1,
+  .card2,
+  .card3 {
+    height: 25vw;
+    width: 42vw;
+    border: #000 2.5px solid;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9c9694;
+    padding: 0vw 0.8vw;
+    transition: all 1s ease-out;
+  }
+  
+  .card-b {
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='2' stroke-dasharray='12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    height: 23.5vw;
+    width: 40.5vw;
+    border-radius: 10px;
+    padding: 1.2vw 2vw;
+  }
+  
+  .card-b p {
+    font-size: 2vw;
+    font-weight: 100;
+    text-decoration: underline;
+    font-family: Playfair Display;
+    /* width: 93%; */
+  }
+  
+  .card-b .by .photo {
+    width: 3vw;
+    height: 3vw;
+    background: #00000081;
+    border-radius: 50%;
+    /* border: #000 1px solid; */
+  }
+
+  .photo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+  }
+
+  .photo img:hover{
+    transform: translateY(-10%) scale(1.5); 
+  }
+  
+  .by {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 49%;
+    padding-top: 5vw;
+  }
+  
+  .inf {
+    line-height: 0.9;
+  }
+  
+  .by .inf h3 {
+    font-family: canopee;
+    font-weight: 100;
+    font-size: 2vw;
+  }
+  
+  .by .inf h5 {
+    font-family: playfair display;
+    font-weight: 100;
+    font-size: 1.2vw;
+  }
+  
+  .card1 {
+    transform: translateX(-58%);
+  }
+  
+  .card2 {
+    transform: translateX(-116%);
+  }
+  
+  .card3 {
+    transform: translateX(-174%);
+  }
+  
+  .card0:hover ~ .card1 {
+    transform: translateX(-5%);
+  }
+  
+  .card0:hover ~ .card2 {
+    transform: translateX(-65%);
+  }
+  
+  .card0:hover ~ .card3 {
+    transform: translateX(-125%);
+  }
+  
+  .card1:hover ~ .card2 {
+    transform: translateX(-63%);
+  }
+  
+  .card1:hover ~ .card3 {
+    transform: translateX(-123%);
+  }
+  
+  .card2:hover ~ .card3 {
+    transform: translateX(-123%);
+  }
+  
+  @media screen and (max-width: 768px) {
+
+    h1{
+        font-size: 7vw;
+        margin-bottom: 50vw;
+    }
+    #cards {
+      flex-direction: column;
+      height: 50%;
+      justify-content: center;
+    }
+  
+    .card0,
+    .card1,
+    .card2,
+    .card3 {
+      height: 40vw;
+      width: 80vw;
+      margin-bottom: 5vw;
+    }
+  
+    .card-b {
+      height: 38.5vw;
+      width: 78.5vw;
+    }
+  
+    .card-b p {
+      font-size: 3.5vw;
+    }
+  
+    .by {
+      padding-top: 10vw;
+    }
+  
+    .by .inf h3 {
+      font-size: 3.5vw;
+    }
+  
+    .by .inf h5 {
+      font-size: 2.5vw;
+    }
+
+    .card1 {
+        transform: translateY(-58%);
+      }
+      
+      .card2 {
+        transform: translateY(-116%);
+      }
+      
+      .card3 {
+        transform: translateY(-170%);
+      }
+      
+      .card0:hover ~ .card1 {
+        transform: translateY(-5%);
+      }
+      
+      .card0:hover ~ .card2 {
+        transform: translateY(-65%);
+      }
+      
+      .card0:hover ~ .card3 {
+        transform: translateY(-125%);
+      }
+      
+      .card1:hover ~ .card2 {
+        transform: translateY(-63%);
+      }
+      
+      .card1:hover ~ .card3 {
+        transform: translateY(-123%);
+      }
+      
+      .card2:hover ~ .card3 {
+        transform: translateY(-123%);
+      }
+
+    
+  }
